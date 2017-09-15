@@ -25,6 +25,8 @@ export default Component.extend({
 
       if (value !== this.get('value') && typeof onToggle === 'function') {
         onToggle(value);
+
+        this.element.querySelector('.x-toggle').checked = this.get('value');
       }
     }
   }
